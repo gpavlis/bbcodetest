@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BB.CodeTest.Models.Data.Customer>
+
+<table>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            Organization ID
+        </td>
+        <td>
+            First Name
+        </td>
+        <td>
+            Last Name
+        </td>
+        <td>
+            Address
+        </td>
+        <td>
+            City
+        </td>
+        <td>
+            State
+        </td>
+        <td>
+            Zipcode
+        </td>
+    </tr>
+    @foreach(var customer in Model)
+    {
+<tr>
+    <td>
+        @customer.Id
+    </td>
+    <td>
+        @customer.OrganizationId
+    </td>
+    <td>
+        @customer.FirstName
+    </td>
+    <td>
+        @customer.LastName
+    </td>
+    <td>
+        @customer.Address
+    </td>
+    <td>
+        @customer.City
+    </td>
+    <td>
+        @customer.State
+    </td>
+    <td>
+        @customer.ZipCode
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", "Customer", new { @customer.Id })
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.Id, }, null)
+    </td>
+
+</tr>
+    }
+</table>

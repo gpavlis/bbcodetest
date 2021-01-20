@@ -1,0 +1,43 @@
+﻿@model BB.CodeTest.Models.Data.Customer
+
+
+
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<form method="post">
+    <div>
+        <div>@Html.DisplayNameFor(x => x.Id)</div>
+        <div>@Html.DisplayFor(x => x.Id)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.FirstName)</div>
+        <div>@Html.DisplayFor(x => x.FirstName)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.LastName)</div>
+        <div>@Html.DisplayFor(x => x.LastName)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.Address)</div>
+        <div>@Html.DisplayFor(x => x.Address)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.City)</div>
+        <div>@Html.DisplayFor(x => x.City)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.State)</div>
+        <div>@Html.DisplayFor(x => x.State)</div>
+    </div>
+    <div>
+        <div>@Html.DisplayNameFor(x => x.ZipCode)</div>
+        <div>@Html.DisplayFor(x => x.ZipCode)</div>
+    </div>
+    <button formaction="/Customer">Cancel</button>
+    <button asp-route="Edit">Submit</button>
+</form>
